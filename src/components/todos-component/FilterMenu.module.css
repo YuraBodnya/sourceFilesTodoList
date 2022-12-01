@@ -1,0 +1,77 @@
+.wrapperFilterMenu{
+   position: relative;
+   width: 23rem;
+   box-shadow: inset -5px -5px 5px rgba(255,255,255, .5), inset 5px 5px 5px rgb(0 0 0 / 10%);
+   border-radius: 1rem;
+}
+.wrapperFilterMenu.active .filterMenuList{
+   opacity: 1;
+   pointer-events: all;
+}
+.filterMenuValue{
+   gap: 1.5rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-end;
+   cursor: pointer;
+   padding: 1rem;
+   font-size: 2rem;
+   text-shadow: 1px 1px 0 white;
+   user-select: none;
+   transition: .3s;
+}
+.filterMenuValue:hover{
+   color: #16a34a;
+}
+.wrapperFilterMenu.active{
+   color: #16a34a;
+}
+.wrapperFilterMenu.active .filterTodoArrow{
+   transform: rotate(180deg);
+}
+.filterTodoArrow{
+   transition: transform .3s;
+}
+/* ======================================= */
+.filterMenuList{
+   position: absolute;
+   z-index: 100;
+   top: 100%;
+   left: 0;
+   width: 100%;
+   background-color: #fff;
+   opacity: 0;
+   pointer-events: none;
+   transition: .3s;
+   color: #000;
+   border-radius: 1rem;
+   box-shadow: 5px 5px 10px #5a5a5a,-5px -5px 10px #ffffff;
+}
+.filterMenuList :last-child{
+   border-radius: 0 0 1rem 1rem;
+}
+.filterMenuList :first-child{
+   border-radius: 1rem 1rem 0 0;
+}
+.filterMenuItem{
+   cursor: pointer;
+   padding: 1rem;
+   text-align: start;
+   transition: .3s;
+   background-color: #ecf0f3;
+   text-shadow: 1px 1px 0 white;
+}
+.filterMenuItem:last-child(){
+   border-radius: 0 0 1rem 1rem;
+}
+.filterMenuItem:hover{
+   padding-left: 1.5rem;
+   background-color: #dce0e3;
+   color: #16a34a;
+}
+
+@media screen and (max-width:450px) {
+   .wrapperFilterMenu {
+      width: 100%;
+   }
+}

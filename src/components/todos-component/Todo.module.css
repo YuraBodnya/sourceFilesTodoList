@@ -1,0 +1,125 @@
+.todo {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 1.5rem;
+   padding: 1.5rem;
+   flex-wrap: wrap;
+   box-shadow: -4px -4px 6px rgb(255 255 255 / 70%), 4px 4px 6px #c0c0de, inset -4px -4px 12px rgb(255 255 255 / 10%), inset 4px 4px 12px #e8e8f3;
+   border-radius: 1rem;
+   word-break: break-all;
+}
+
+.todo:not(:last-child) {
+   margin-bottom: 2rem;
+}
+/* =================================== */
+.todoCheckBox {
+   display: none;
+}
+.checkboxLabel{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 1.5rem;
+   border-radius: 50%;
+   cursor: pointer;
+   transition: .3s;
+   box-shadow: -4px -4px 6px rgb(255 255 255 / 70%), 4px 4px 6px #c0c0de, inset -4px -4px 12px rgb(255 255 255 / 10%), inset 4px 4px 12px #e8e8f3;
+}
+.checkboxLabel:hover{
+   box-shadow: -4px -4px 6px rgb(255 255 255 / 70%), 6px 6px 6px #c0c0de, inset -4px -4px 12px rgb(255 255 255 / 10%), inset 4px 4px 12px #e8e8f3;
+}
+.checkboxLabel:active{
+   box-shadow: -4px -4px 10px rgb(255 255 255 / 20%), 4px 4px 6px #e8e8f3, inset -4px -4px 12px rgb(255 255 255 / 60%), inset -2px -2px 2px rgb(255 255 255 / 20%), inset 4px 4px 6px #c6c6e2;
+}
+.checkboxLabel.active{
+   color: rgb(3, 209, 3);
+   box-shadow: -4px -4px 10px rgb(255 255 255 / 20%), 4px 4px 6px #e8e8f3, inset -4px -4px 12px rgb(255 255 255 / 60%), inset -2px -2px 2px rgb(255 255 255 / 20%), inset 4px 4px 6px #c6c6e2;
+}
+/* =================================== */
+.todoCol{
+   display: flex;
+   align-items: center;
+   gap: 1.5rem;
+}
+.todoDesc {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   text-shadow: 1px 1px 0 white;
+   user-select: none;
+   padding: 0 1rem;
+   word-wrap: break-word;
+}
+.todoTitle {
+   text-align: start;
+   max-width: 100%;
+   margin-bottom: 1rem;
+}
+/* =================================== */
+.todoActions {
+   display: flex;
+   gap: 1.5rem;
+   margin-left: auto;
+}
+.todoTitleComplited{
+   text-decoration: line-through;
+   opacity: .5;
+}
+.deleteBtn,
+.editBtn {
+   display: flex;
+   align-items: flex-end;
+   justify-content: space-between;
+   gap: 1rem;
+   border: none;
+   outline: none;
+   padding: 1.5rem 2rem;
+   border-radius: 1rem;
+   text-shadow: 1px 1px 0 #fff;
+   cursor: pointer;
+   font-weight: 500;
+   transition: .3s;
+   user-select: none;
+   box-shadow: -4px -4px 6px rgb(255 255 255 / 70%), 4px 4px 6px #c0c0de, inset -4px -4px 12px rgb(255 255 255 / 10%), inset 4px 4px 12px #e8e8f3;
+}
+.deleteBtn:hover{
+   color: rgb(205, 2, 29);
+   box-shadow: -4px -4px 6px rgb(255 255 255 / 70%), 7px 7px 6px #c0c0de, inset -4px -4px 12px rgb(255 255 255 / 10%), inset 4px 4px 12px #e8e8f3;
+}
+.deleteBtn:active{
+   color: rgb(205, 2, 29);
+   box-shadow: -4px -4px 10px rgb(255 255 255 / 20%), 4px 4px 6px #e8e8f3, inset -4px -4px 12px rgb(255 255 255 / 60%), inset -2px -2px 2px rgb(255 255 255 / 20%), inset 4px 4px 6px #c6c6e2;
+}
+.editBtn:hover {
+   color: rgb(255, 165, 0);
+   box-shadow: -4px -4px 6px rgb(255 255 255 / 70%), 7px 7px 6px #c0c0de, inset -4px -4px 12px rgb(255 255 255 / 10%), inset 4px 4px 12px #e8e8f3;
+}
+.editBtn:active {
+   color: rgb(255, 165, 0);
+   box-shadow: -4px -4px 10px rgb(255 255 255 / 20%), 4px 4px 6px #e8e8f3, inset -4px -4px 12px rgb(255 255 255 / 60%), inset -2px -2px 2px rgb(255 255 255 / 20%), inset 4px 4px 6px #c6c6e2;
+}
+.editBtn:hover path{
+   stroke: rgb(255, 165, 0);
+}
+.deleteBtn path{
+   transition: .3s;
+   color: rgb(205, 2, 29);
+}
+.editBtn path{
+   transition: .3s;
+   stroke: rgb(255, 165, 0);
+}
+
+.editBtn {
+   box-shadow: -4px -4px 6px rgb(255 255 255 / 70%), 4px 4px 6px #c0c0de, inset -4px -4px 12px rgb(255 255 255 / 10%), inset 4px 4px 12px #e8e8f3;
+}
+
+@media screen and (max-width:450px){
+   .todoActions{
+      width: 100%;
+      flex-direction: column;
+   }
+}
+

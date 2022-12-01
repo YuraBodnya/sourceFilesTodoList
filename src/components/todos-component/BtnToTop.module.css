@@ -1,0 +1,35 @@
+.btnToTop{
+   position: fixed;
+   bottom: 2rem;
+   left: 3rem;
+   z-index: 50;
+   width: 5rem;
+   height: 5rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50%;
+   transition: .3s;
+   font-size: 2rem;
+   background-color: #dbdbdb;
+   cursor: pointer;
+   pointer-events: none;
+   opacity: 0;
+   animation:  1s cubic-bezier(1, 0, 0, 1) toTop forwards;
+   box-shadow: 0px 5px 16px 0px rgba(34, 60, 80, 0.64);
+}
+.btnToTop:hover{
+   color:green;
+}
+
+@keyframes toTop {
+   0%{
+      opacity: 0;
+      transform: translateY(50rem);
+   }
+   100%{
+      opacity: 1;
+      transform: translateY(0rem);
+      pointer-events: all;
+   }
+}

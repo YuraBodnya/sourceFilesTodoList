@@ -1,0 +1,62 @@
+.wrapperTodos{
+   text-align: center;
+   font-size: 1.6rem;
+   width: 100%;
+   padding: 1.5rem 1.5rem 5rem 1.5rem;
+   box-shadow: 21px 21px 42px #5a5a5a,-21px -21px 42px #ffffff;
+   border-radius: 1.2rem;
+}
+/* =================================== */
+.todoListTitle{
+   text-shadow: 1px 1px 0 white;
+   color: #4B70E2;
+   user-select: none;
+   font-size: 4rem;
+   font-weight: 700;
+   font-family: 'Lobster', cursive;
+}
+.actionTodos{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 2rem;
+   gap: 2rem;
+}
+.addTodoBtn{
+   border: none;
+   padding: 1.5rem 2rem;
+   border-radius: 1rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   outline: none;
+   cursor: pointer;
+   transition: .3s;
+   color: rgb(205, 2, 29);
+   text-shadow: 1px 1px 0 white;
+   font-size: 2rem;
+   font-weight: 500;
+   box-shadow: -4px -4px 6px rgb(255 255 255 / 70%), 4px 4px 6px #c0c0de, inset -4px -4px 12px rgb(255 255 255 / 10%), inset 4px 4px 12px #e8e8f3;
+}
+.addTodoBtn:hover{
+   color: #16a34a;
+   box-shadow: -4px -4px 6px rgb(255 255 255 / 70%), 7px 7px 6px #c0c0de, inset -4px -4px 12px rgb(255 255 255 / 10%), inset 4px 4px 12px #e8e8f3;
+}
+.addTodoBtn:active{
+   box-shadow: -4px -4px 10px rgb(255 255 255 / 20%), 4px 4px 6px #e8e8f3, inset -4px -4px 12px rgb(255 255 255 / 60%), inset -2px -2px 2px rgb(255 255 255 / 20%), inset 4px 4px 6px #c6c6e2;
+   color: #16a34a;
+}
+/* =================================== */
+.todos{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+}
+/* =================================== */
+
+@media screen and (max-width:450px) {
+   .actionTodos {
+      flex-direction: column;
+      align-items: stretch;
+   }
+}

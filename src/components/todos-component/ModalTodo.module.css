@@ -1,0 +1,176 @@
+.wrapperModalTodo{
+   width: 100%;
+   height: 100vh;
+   position: fixed;
+   top: 0;
+   left: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: rgba(0, 0, 0, .4);
+}
+/* =========================================== */
+.modalTodoBody{
+   padding: 1.5rem;
+   border-radius: 1rem;
+   background-color: #ecf0f3;
+   font-size: 1.6rem;
+   width: 40rem;
+}
+/* =========================================== */
+.modalTodoHeader{
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   gap: 3rem;
+   font-size: 2.5rem;
+   margin-bottom: 1.5rem;
+}
+.modalTodoCloseIconBox{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 1.5rem;
+   transition: .3s;
+   box-shadow: -4px -4px 6px rgb(255 255 255 / 70%), 4px 4px 6px #c0c0de, inset -4px -4px 12px rgb(255 255 255 / 10%), inset 4px 4px 12px #e8e8f3;
+   border-radius: 50%;
+   cursor: pointer;
+}
+.modalTodoCloseIconBox:hover{
+   box-shadow: -4px -4px 6px rgb(255 255 255 / 70%), 6px 6px 6px #c0c0de, inset -4px -4px 12px rgb(255 255 255 / 10%), inset 4px 4px 12px #e8e8f3;
+}
+.modalTodoCloseIconBox:active{
+   box-shadow: -4px -4px 10px rgb(255 255 255 / 20%), 4px 4px 6px #e8e8f3, inset -4px -4px 12px rgb(255 255 255 / 60%), inset -2px -2px 2px rgb(255 255 255 / 20%), inset 4px 4px 6px #c6c6e2;
+}
+.modalTodoCloseIconBox:hover .modalTodoCloseIcon>path{
+   stroke: rgb(184, 6, 6);
+}
+.modalTodoCloseIcon{
+   cursor: pointer;
+   transition: .3s;
+   font-size: 2rem;
+}
+.modalTodoCloseIcon > path{
+   transition: .3s;
+}
+/* =========================================== */
+.modalTodoTitle {
+   padding: 1.2rem 1.5rem;
+   outline: none;
+   margin-bottom: 1.5rem;
+   width: 100%;
+   border: none;
+   box-shadow: inset -5px -5px 5px rgba(255, 255, 255, .5), inset 5px 5px 5px rgb(0 0 0 / 10%);
+   border-radius: 1rem;
+   background-color: transparent;
+   text-shadow: 1px 1px 0 #ffff;
+   font-weight: 600;
+}
+.modalTodoTitle::placeholder {
+  font-weight: 600;
+  color: #000;
+  text-shadow: 1px 1px 0 #ffff;
+  transition: .3s;
+}
+.modalTodoTitle:focus::placeholder {
+  color: red;
+}
+.modalTodoSelect {
+   margin-bottom: 3.5rem;
+   position: relative;
+   width: 100%;
+   box-shadow: inset -5px -5px 5px rgba(255, 255, 255, .5), inset 5px 5px 5px rgb(0 0 0 / 10%);
+   border-radius: 1rem;
+}
+.modalTodoSelectValue{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 1.2rem 1.5rem;
+   cursor: pointer;
+   text-shadow: 1px 1px 0 #ffff;
+   transition: .3s;
+}
+.modalTodoSelectValue.active{
+   color: green;
+}
+.modalTodoSelectValue.active .modalSelectArrow{
+   transform: rotate(180deg);
+}
+.modalSelectArrow{
+   transition: transform .3s;
+}
+.selectList{
+   position: absolute;
+   left: 0;
+   top: 100%;
+   width: 100%;
+   overflow: hidden;
+   height: 0;
+   transition: all .5s;
+   opacity: 0;
+   pointer-events: none;
+   border-radius: 1rem;
+   box-shadow: 5px 5px 10px #bebebe,-5px -5px 10px #ffffff;
+}
+.selectList.active{
+   height: 7.7rem;
+   opacity: 1;
+   pointer-events: all;
+}
+.selectItem{
+   cursor: pointer;
+   padding: 1rem;
+   background-color: #ecf0f3;
+   text-shadow: 1px 1px 0 #ffff;
+   transition: .3s;
+}
+.selectItem:hover{
+   background-color: #d0d4d8;
+   padding-left: 2rem;
+   color: rgb(5, 145, 0);
+}
+/* =========================================== */
+.modalTodoFooter {
+   display: flex;
+   justify-content: flex-end;
+   align-self: center;
+   gap: 1.5rem;
+}
+.modalTodoAcceptBtn,
+.modalTodoCancelBtn {
+   padding: 1rem 1.5rem;
+   transition: .3s;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: none;
+   outline: none;
+   border-radius: .5rem;
+   font-weight: 600;
+   color: rgb(5, 145, 0);
+   cursor: pointer;
+   text-shadow: 1px 1px 0 #ffff;
+   box-shadow: -4px -4px 6px rgb(255 255 255 / 70%), 4px 4px 6px #c0c0de, inset -4px -4px 12px rgb(255 255 255 / 10%), inset 4px 4px 12px #e8e8f3;
+}
+.modalTodoCancelBtn {
+   color: rgb(207, 0, 0);
+}
+.modalTodoCancelBtn:hover {
+   box-shadow: -4px -4px 6px rgb(255 255 255 / 70%), 7px 7px 6px #c0c0de, inset -4px -4px 12px rgb(255 255 255 / 10%), inset 4px 4px 12px #e8e8f3;
+}
+.modalTodoCancelBtn:active {
+   box-shadow: -4px -4px 10px rgb(255 255 255 / 20%), 4px 4px 6px #e8e8f3, inset -4px -4px 12px rgb(255 255 255 / 60%), inset -2px -2px 2px rgb(255 255 255 / 20%), inset 4px 4px 6px #c6c6e2;
+}
+.modalTodoAcceptBtn:hover {
+box-shadow: -4px -4px 6px rgb(255 255 255 / 70%), 7px 7px 6px #c0c0de, inset -4px -4px 12px rgb(255 255 255 / 10%), inset 4px 4px 12px #e8e8f3;
+}
+.modalTodoAcceptBtn:active {
+   box-shadow: -4px -4px 10px rgb(255 255 255 / 20%), 4px 4px 6px #e8e8f3, inset -4px -4px 12px rgb(255 255 255 / 60%), inset -2px -2px 2px rgb(255 255 255 / 20%), inset 4px 4px 6px #c6c6e2;
+}
+
+@media screen and (max-width:440px){
+   .modalTodoBody {
+      width: 28rem;
+   }
+}
